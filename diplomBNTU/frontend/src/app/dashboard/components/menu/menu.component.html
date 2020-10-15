@@ -1,0 +1,26 @@
+<div class="container m-0 p-0 col-12">
+  <div *ngFor="let item of menu | async" class="dish">
+    <span class="category">
+      {{item.category}}
+    </span>
+    <div *ngFor="let el of item.dishes">
+      <div class="item">
+        <span>
+          {{el.dish}}
+        </span>
+        <span>
+          {{el.weight}}
+        </span>
+        <span>
+          <span>{{el.price}}</span>
+          <img (click)="addToDashboard($event)" src="./assets/addpicture.png" alt="добавить" width="40" height="40">
+        </span>
+      </div>
+      <div class="description">
+        <span>
+          {{el.description}}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

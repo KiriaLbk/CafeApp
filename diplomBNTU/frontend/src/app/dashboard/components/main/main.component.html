@@ -1,0 +1,10 @@
+<div class="container m-0 p-0 col-12">
+  <div class="canteens">
+    <div (click)="nextMenu($event)" *ngFor="let item of canteens | async" class="canteens__item">
+      <span>
+        {{item.name}}
+      </span>
+      <div class="span_background"></div>
+    </div>
+  </div>
+</div>

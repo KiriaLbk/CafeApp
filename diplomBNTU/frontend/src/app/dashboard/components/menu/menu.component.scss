@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #E0CFB1;
+  // height: 82vh;
+  // background-image: url(/assets/pic1-title.jpg);
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center;
+  .dish {
+    flex-direction: column;
+    width:70%;
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 40% 30% 40% 20%;
+    border: 2px solid #000;
+    padding: 90px;
+    .category {
+      font-size: 20px;
+      font-family: 'Caveat', cursive;
+    }
+    div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      .item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        span {
+          width: 33%;
+          text-align: center;
+          font-size: 17px;
+          font-family: 'Caveat', cursive;
+        }
+        .price {
+          margin-right: 30px;
+        }
+      }
+      .description {
+        width:100%;
+        span {
+          width: 100%;
+        }
+      }
+    }
+    .category {
+      text-align: center;
+    }
+  }
+  .dish:nth-child(2n+1) {
+    margin-bottom: 20px;
+    align-self: flex-end;
+  }
+  .dish:nth-child(2n) {
+    margin-top: 30px;
+  }
+}

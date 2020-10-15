@@ -1,0 +1,14 @@
+<div class="container p-0 m-0 col-12">
+  <div class="admin">
+    <div class="title">Заказы</div>
+    <div class="order">
+     <div (click)="goToOrder($event)" *ngFor="let item of order">
+       <span>{{item.user}}</span>
+       <span>{{item.time}}</span>
+       <span>{{item.sum}}</span>
+     </div>
+    <div *ngIf="condition">Заказов нет</div>
+    </div>
+  </div>
+</div>
+

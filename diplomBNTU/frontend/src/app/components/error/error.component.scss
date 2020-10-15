@@ -1,0 +1,24 @@
+.container {
+  height: 100vh;
+  background-color: #F0FF79 ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .error__block {
+    height: 620px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    button {
+      font-size: 20px;
+      background-color: #FFAD32;
+      border: 1px solid #FFAD32 ;
+      height: 51px;
+      width: 140px;
+      color: #fff;
+      margin-left: 70px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<div class="container col-12 p-0 m-0">
+  <div class="admin">
+    <div class="title">Заказ</div>
+      <div class="order">
+        <p>Логин : {{order.user}}</p>
+        <p>Email : {{order.email}}</p>
+        <p>Сумма : {{order.sum}}</p>
+        <p>Дата заказа : {{order.time}}</p>
+        <p class="order__text">Блюда</p>
+        <div class="dishes">
+          <div class="item" *ngFor="let el of order.order[0].dishes">
+            <span>
+              {{el.dish}}
+            </span>
+            <span>
+              {{el.weight}}
+            </span>
+            <span class="price">
+              {{el.price}}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

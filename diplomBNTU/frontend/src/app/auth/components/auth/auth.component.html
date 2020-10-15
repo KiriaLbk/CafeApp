@@ -1,0 +1,25 @@
+<div class="container col-12 m-0 p-0">
+  <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" class="form">
+    <div class="form__title">
+      <span class="loginBlock-text">
+        Авторизация
+      </span>
+    </div>
+    <div class="form__body">
+      <div class="form-group">
+        <input type="text" [ngClass]="{'is-invalid' : formErrors.fullName}" (blur)="logErrors()" name="login" formControlName="fullName" placeholder="Логин" class="form-control inp">
+        <span class="text-danger" *ngIf="formErrors.fullName">
+          {{formErrors.fullName}}
+        </span>
+      </div>
+      <div class="form-group">
+        <input type="password" (blur)="logErrors()" [ngClass]="{'is-invalid':formErrors.pass}" name="password" formControlName="pass" placeholder="Пароль" class="form-control">
+        <img appHidden src="./assets/icon_eye.png" class="eye" [ngClass]="{'moveEye': formErrors.pass.length!==0}">
+        <span class="text-danger" *ngIf="formErrors.pass">
+          {{formErrors.pass}}
+        </span>
+      </div>
+      <button class="btn btn-success" type="submit">Авторизация</button>
+    </div>
+  </form>
+</div>

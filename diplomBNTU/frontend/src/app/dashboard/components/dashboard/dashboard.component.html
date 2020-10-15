@@ -1,0 +1,33 @@
+<div class="container col-12 p-0 m-0">
+  <div class="order__container">
+    <div *ngIf="condition" class="condition">
+      <span class="order__title">Заказ</span>
+      <div *ngFor="let item of menu" class="order">
+        <span class="canteen">
+          {{item.canteen}}
+        </span>
+        <div class="dishes" *ngFor="let el of item.dishes">
+          <div class="item">
+            <span>
+              {{el.dish}}
+            </span>
+            <span>
+              {{el.weight}}
+            </span>
+            <span class="price">
+              <span>{{el.price}}</span>
+              <img (click)="deleteDish($event)" class="price" src="./assets/delete.png" alt="удалить" width="40" height="40">
+            </span>
+          </div>
+        </div>
+      </div>
+      <span class="sum">
+        {{price}}
+      </span>
+      <button (click)="addOrder()">Оформить заказ</button>
+    </div>
+    <div *ngIf="!condition">
+      Блюд не добавлено
+    </div>
+  </div>
+</div>

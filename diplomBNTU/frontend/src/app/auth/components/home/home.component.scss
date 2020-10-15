@@ -1,0 +1,140 @@
+.containers{
+  display: block;
+  height: 140vh;
+  width: 100%;
+  position: relative;
+  background-image: url(/assets/home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  .back{
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    img{
+      width: 100%;
+    }
+  }
+  .animation__clouds{
+    position: relative;
+    z-index:3;
+    :nth-child(1){
+      position: absolute;
+      display: block;
+      left: 360px;
+      top: 60px;
+    }
+    :nth-child(2){
+      position: absolute;
+      left: 580px;
+      top: 8px;
+    }
+    :nth-child(3){
+      position: absolute;
+      right: 360px;
+      top: 60px;
+    }
+    :nth-child(4){
+      position: absolute;
+      left: 580px;
+      top: 90px;
+    }
+    :nth-child(5){
+      position: absolute;
+      left: 20px;
+      top: 0px;
+    }
+    :nth-child(6){
+      position: absolute;
+      right: 10px;
+      top: 30px;
+    }
+  }
+  .logotip{
+    position: relative;
+    z-index:2;
+    .container__logo{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      height: 140px;
+      width: 360px;
+      top: 90px;
+      left: 595px;
+      span{
+        font-size: 30px;
+        font-family: 'Kufam', cursive;
+        color: #062108;
+        font-weight: bold;
+      }
+    }
+  }
+  .firstitem{
+    height: 300px;
+    width: 460px;
+    opacity: 0;
+    top: 33%;
+    z-index: 2;
+    position: absolute;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    .text{
+      display: flex;
+      justify-content: center;
+      height:100%;
+      width: 100%;
+      h2{
+        display: flex;
+        align-items: center;
+        height:100%;
+        width:80%;
+        color: #616841;
+        font-size: 20px;
+      }
+    }
+    .line{
+      position: absolute;
+      width:100%;
+      height:100%;
+      border: 4px solid #616841;
+      top: 20px;
+      left: 20px;
+    }
+  }
+  .seconditem{
+    height: 300px;
+    width: 460px;
+    top: 68%;
+    right: 0px;
+    z-index: 2;
+    position: absolute;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    opacity: 0;
+    .text{
+      display: flex;
+      justify-content: center;
+      height:100%;
+      width: 100%;
+      h2{
+        display: flex;
+        align-items: center;
+        height:100%;
+        width:80%;
+        color: #616841;
+        font-size: 20px;
+      }
+    }
+    .line{
+      position: absolute;
+      width:100%;
+      height:100%;
+      border: 4px solid #616841;
+      top: -20px;
+      left: -20px;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<div class="container col-12 d-flex justify-content-end">
+  <div *ngIf="conditionAuth" class="d-flex justify-content-between col-2.5 p-3">
+    <a class="btn link" [routerLink]="['/reg/']">Регистрация</a>
+    <a class="btn link" [routerLink]="['/auth']">Авторизация</a>
+  </div>
+  <div *ngIf="conditionLogOut" class="col-2.5 p-3">
+    <a class="btn link" (click)="loginOut()" [routerLink]="['']">Выйти</a>
+    <a *ngIf="conditionDash" class="btn link" [routerLink]="['/account/dashboard']">Кабинет</a>
+  </div>
+</div>
