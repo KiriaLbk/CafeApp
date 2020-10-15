@@ -5,4 +5,4 @@ This application allows a student or teacher to open the menu in a split second,
 * NodeJs(server part)
 * Angular
 * MongoDB(db)
-* ExpressJs
+* Express.js
